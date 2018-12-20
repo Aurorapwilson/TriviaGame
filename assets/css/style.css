@@ -9,7 +9,7 @@
     
 }
 .jumbotron.text-center{
-    min-height: 600px;
+    min-height: 400px;
     position: absolute;
     z-index:2;
 }

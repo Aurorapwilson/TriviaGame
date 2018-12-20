@@ -1,5 +1,5 @@
 //create an object that holds the time of 2 minutes to finish the game.
-let Time = 120;
+
 //Then create an array for my questions
 let questions = {
     Q1: {'What is the name of Jake\'s girlfriend?': 'Lady Rainicorn'},
@@ -17,6 +17,7 @@ let questions = {
 let correctAnswers;
 let wrongAnswers;
 let intervalId;
+let time = 120;
 
 //Create a function to play the game
 //When we click the button two thing will happen

@@ -109,7 +109,7 @@ let questions = [{
 let correctAnswers;
 let wrongAnswers;
 let intervalId;
-let time = 120;
+let time = 2;
 
 // Cache elements
 let questionContainer = $(".questionContainer");
@@ -118,6 +118,7 @@ let rowContainer = $("#rowContainer");
 
 //Create a function to play the game
 //When we click the button two thing will happen
+//TODO: Validate when user click on play again and remove all childs and message of the previous game
 $('.startBtn').click(function () {
 
   //remove the start button once clicked and show first answer
@@ -133,14 +134,11 @@ function quest1() {
   $(newDiv).html(questions);
   $('.jumbotron.text-center').append(newDiv);
 
-
   // when the first part of quest1 runs and our new question div appear we start our timer
   $('.btnContainer').append(newDiv);
   intervalId = setInterval(timeCount, 1000);
   buildQuestions();
 }
-
-
 
 //this function is our timer basically decreasing 1000milliseconds
 function timeCount() {
@@ -158,7 +156,9 @@ function stopTimer() {
   $("#show-number").html("<h2>Time has run out, refresh browser to Play Again!</h2>");
   $('button').css('display', "initial");
   time = 120;
-  //TODO: Delete childs element when usr click on Play again
+  //TODO: Delete childs element when usr click on Play again and Validate
+  questionContainer.empty("");
+
 }
 
 function buildQuestions() {

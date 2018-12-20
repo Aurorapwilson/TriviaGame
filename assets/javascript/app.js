@@ -2,14 +2,14 @@
 
 //Then create an array for my questions
 let questions = {
-    Q1: {'What is the name of Jake\'s girlfriend?': 'Lady Rainicorn'},
-    Q2: {'Who is Marceline?': 'A vampire'},
-    Q3: {'What world does Adventure Time take place?': 'Ooo'},
-    Q4: {'How many children does Jake have?': '5'},
-    Q5: {'Who plays the voice of FInn the Human?': 'Jeremy Shada'},
-    Q6: {'Who is the King that steals the princesses?': 'Ice King'},
-    Q7: {'Where does Jake say he got his stretchy powers?': 'mud puddle'},
-    Q8: {'This character is unliked by most people, and also the heir to the Candy Kingdom throne.' :'Lemongrab'}
+    Q1: {'The name of Jake\'s girlfriend is Lady Rainicorn': 't'},
+    Q2: {'Marceline is a ghost': 'f'},
+    Q3: {'Jake and Finn live in the world of Ooo': 't'},
+    Q4: {'Jake has 18 children' : 'f'},
+    Q5: {'The voice of Finn the Human is Jason Bateman' : 'f'},
+    Q6: {'The Ice King kidnaps the princesses of Ooo from time to time': 't'},
+    Q7: {'LSP is a Cloud Princess': 't'},
+    Q8: {'Finn and Jake live in a cave atop a mountain': 'f'}
 };
 
 
@@ -18,35 +18,44 @@ let correctAnswers;
 let wrongAnswers;
 let intervalId;
 let time = 120;
+ 
 
 //Create a function to play the game
 //When we click the button two thing will happen
-
-  $('.btn').click(function() {
-      alert("button has been clicked");
+$('.btn').click(function() {
+      
       //remove the start button once clicked and show first answer
       $('button').remove('.btn');
       //then we want to run the first question function
-      quest1();
+  quest1 ();
     });
+    
+//function to create new Div with the first question of our object
+ function quest1() {
+   //create new div for questions
+  let newDiv= $('<div= "questions">')
+  $(newDiv).html(questions);
+  $('.jumbotron.text-center').append(newDiv);
 
-  //function to create new Div with the first question of our object
-  function quest1() {
-      let newDiv = $('<div class= "quest q1">');
-      newDiv.html(questions.Q1);
 
-      console.log();
+// when the first part of quest1 runs and our new question div appear we start our timer
+$('.btnContainer').append(newDiv);
+intervalId = setInterval(timeCount, 1000);
+}
 
-    // when the first part of quest1 runs and our new question div appear we start our timer
-    $('.btnContainer').append(newDiv);
-    intervalId = setInterval(timeCount, 1000);
-  }
+
 
   //this function is our timer basically decreasing 1000milliseconds
   function timeCount(){
-      time --;
-      console.log(time);
+    time --;
+    $("#show-number").html("<h2>" + time + "</h2>");
+    //stops timer
+    if (time === 0){
+      alert ('Time has run out, refresh browser to Play Again!', clearTimeout)
+    }
+   
   }
+  
 
 
 

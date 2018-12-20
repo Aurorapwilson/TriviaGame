@@ -28,6 +28,7 @@
 //   }
 // };
 
+//TODO Improve this and check about boolean answers
 let questions = [{
     question: 'The name of Jake\'s girlfriend is Lady Rainicorn',
     answers: {
@@ -40,71 +41,64 @@ let questions = [{
   {
     question: 'Marceline is a ghost',
     answers: {
-      a: "A Dog",
-      b: "A Ghost",
-      c: "A Vampire"
+      a: true,
+      b: false,
     },
-    correctAnswer: "c"
+    correctAnswer: "b"
   },
 
   {
-    question: 'Marceline is a ghost',
+    question: 'Jake and Finn live in the world of Ooo',
     answers: {
-      a: "A Dog",
-      b: "A Ghost",
-      c: "A Vampire"
+      a: true,
+      b: false,
     },
-    correctAnswer: "c"
+    correctAnswer: "a"
   },
 
   {
-    question: 'Marceline is a ghost',
+    question: 'Jake has 18 children',
     answers: {
-      a: "A Dog",
-      b: "A Ghost",
-      c: "A Vampire"
+      a: true,
+      b: false,
     },
-    correctAnswer: "c"
+    correctAnswer: "b"
   },
 
   {
-    question: 'Marceline is a ghost',
+    question: 'The voice of Finn the Human is Jason Bateman',
     answers: {
-      a: "A Dog",
-      b: "A Ghost",
-      c: "A Vampire"
+      a: true,
+      b: false,
     },
-    correctAnswer: "c"
+    correctAnswer: "b"
   },
 
   {
-    question: 'Marceline is a ghost',
+    question: 'The Ice King kidnaps the princesses of Ooo from time to time',
     answers: {
-      a: "A Dog",
-      b: "A Ghost",
-      c: "A Vampire"
+      a: true,
+      b: false,
     },
-    correctAnswer: "c"
+    correctAnswer: "a"
   },
 
   {
-    question: 'Marceline is a ghost',
+    question: 'LSP is a Cloud Princess',
     answers: {
-      a: "A Dog",
-      b: "A Ghost",
-      c: "A Vampire"
+      a: true,
+      b: false,
     },
-    correctAnswer: "c"
+    correctAnswer: "a"
   },
 
   {
-    question: 'Marceline is a ghost',
+    question: 'Finn and Jake live in a cave atop a mountain',
     answers: {
-      a: "A Dog",
-      b: "A Ghost",
-      c: "A Vampire"
+      a: true,
+      b: false,
     },
-    correctAnswer: "c"
+    correctAnswer: "b"
   },
 
 
@@ -115,7 +109,7 @@ let questions = [{
 let correctAnswers;
 let wrongAnswers;
 let intervalId;
-let time = 3;
+let time = 120;
 
 // Cache elements
 let questionContainer = $(".questionContainer");
@@ -181,29 +175,29 @@ function buildQuestions() {
 
         // ...add an HTML radio button
         answers.push(
-          "<label class='radio-question'> <input type='radio' name='question'" + questionNumber + "value='" + game + "'> " + game + " : " + currentQuestion.answers[game] + " </label>"
+          "<label class='radio-question'> <input type='radio' name='question" + questionNumber + '' +  " value='" + game + "'> " + game + " : " + currentQuestion.answers[game] + " </label>"
         );
       }
 
 
 
-                              
+
 
       // add this question and its answers to the output
       output.push(
-        "<div class='col-md-3'>" + 
-          "<div class=''>" +
-            "<div class='card' style='width: 18rem;'>" +
-              "<div class='card-body'>"+
-                "<h5 class='card-title question'>"+ currentQuestion.question +"</h5>" +
-                "<p class='card-text'>"+ answers.join('') +"</p>" +
-              "</div>" +
-            "</div>"+
-          "</div>" +
+        "<div class='col-md-3'>" +
+        "<div class=''>" +
+        "<div class='card' style='width: 18rem;'>" +
+        "<div class='card-body'>" +
+        "<h5 class='card-title question'>" + currentQuestion.question + "</h5>" +
+        "<p class='card-text'>" + answers.join('') + "</p>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
         "</div>"
 
         // "<div class='question'>" + currentQuestion.question + " </div>",
-         //"<div class='answers'> " + answers.join('') + " </div>"
+        //"<div class='answers'> " + answers.join('') + " </div>"
       );
     }
   );

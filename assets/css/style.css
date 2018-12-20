@@ -1,11 +1,13 @@
 body{
     font-family: 'Aleo', serif;
+    background: url("../images/g898hmO.jpg") no-repeat;
+    background-size: cover;
 }
 .container-fluid{
     position:relative;
 
   }
-.container-fluid img{
+/* .container-fluid img{
     background: no-repeat center center fixed;
     position:absolute;
     top:0;
@@ -15,7 +17,7 @@ body{
         -o-background-size: cover;
         background-size: cover;
     
-}
+} */
 .jumbotron.text-center{
     min-height: 400px;
     position: absolute;
@@ -32,3 +34,6 @@ h1 {
     font-family: 'Aleo', serif;
 }
 
+.startBtn {
+    margin-top: 10px;
+}

@@ -18,22 +18,19 @@ let correctAnswers;
 let wrongAnswers;
 let intervalId;
 
-
 //Create a function to play the game
 //When we click the button two thing will happen
-function gamePlay(){
-  $('.btn').click(function()
-  {
+
+  $('.btn').click(function() {
       alert("button has been clicked");
       //remove the start button once clicked and show first answer
       $('button').remove('.btn');
       //then we want to run the first question function
       quest1();
-      });
-    }
-  
+    });
+
   //function to create new Div with the first question of our object
-  function quest1(){
+  function quest1() {
       let newDiv = $('<div class= "quest q1">');
       newDiv.html(questions.Q1);
 

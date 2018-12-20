@@ -10,6 +10,7 @@ body{
     position:absolute;
     top:0;
     z-index:1
+    /* need to make background image cover entire body */
     -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

@@ -33,9 +33,9 @@ $('.btn').click(function() {
 //function to create new Div with the first question of our object
  function quest1() {
    //create new div for questions
-  let newDiv= $('<div= "questions">')
-  $(newDiv).html(questions);
-  $('.jumbotron.text-center').append(newDiv);
+   let newDiv = $('.questionContainer')
+   $('.questionContainer').html(questions);
+ 
 
 
 // when the first part of quest1 runs and our new question div appear we start our timer

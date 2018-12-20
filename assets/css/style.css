@@ -12,6 +12,8 @@
     min-height: 600px;
     position: absolute;
     z-index:2;
+    left: 50%;
+    transform: translateX(-50%);
 }
 h1 {
     font-size: 4.2em;

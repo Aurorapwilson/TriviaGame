@@ -1,11 +1,15 @@
-body{
+body {
     font-family: 'Aleo', serif;
+    background: url("../images/g898hmO.jpg") no-repeat;
+    background-size: cover;
 }
-.container-fluid{
-    position:relative;
 
-  }
-.container-fluid img{
+.container-fluid {
+    position: relative;
+
+}
+
+/* .container-fluid img{
     background: no-repeat center center fixed;
     position:absolute;
     top:0;
@@ -16,20 +20,43 @@ body{
         -o-background-size: cover;
         background-size: cover;
     
-}
-.jumbotron.text-center{
-    min-height: 400px;
+} */
+.jumbotron.text-center {
     position: absolute;
-    z-index:2;
+    z-index: 2;
     left: 50%;
     transform: translateX(-50%);
+    width: 80%;
 }
+
 h1 {
     font-size: 4.2em;
     font-family: 'Aleo', serif;
 }
-#show-number{
+
+#show-number {
     font-size: 3.5em;
     font-family: 'Aleo', serif;
 }
 
+.startBtn {
+    margin-top: 10px;
+}
+
+.card {
+    margin: 20px 8px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+p.card-text {
+    display: flex;
+    justify-content: center;
+}
+
+.radio-question {
+    margin-right: 20px;
+    text-transform: capitalize;
+}

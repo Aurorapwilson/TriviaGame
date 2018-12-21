@@ -109,7 +109,7 @@ let questions = [{
 let correctAnswers;
 let wrongAnswers;
 let intervalId;
-let time = 2;
+let time = 120;
 
 // Cache elements
 let questionContainer = $(".questionContainer");
@@ -128,19 +128,11 @@ $('.startBtn').click(function () {
 });
 
 //function to create new Div with the first question of our object
-<<<<<<< HEAD
- function quest1() {
-   //create new div for questions
-   let newDiv = $('.questionContainer')
-   $('.questionContainer').html(questions);
- 
-=======
 function quest1() {
   //create new div for questions
   let newDiv = $('<div= "questions">')
   $(newDiv).html(questions);
   $('.jumbotron.text-center').append(newDiv);
->>>>>>> 4cf47b9d961a17da9c20fa56c102f99cdc53e96c
 
   // when the first part of quest1 runs and our new question div appear we start our timer
   $('.btnContainer').append(newDiv);
@@ -185,6 +177,10 @@ function buildQuestions() {
         answers.push(
           "<label class='radio-question'> <input type='radio' name='question" + questionNumber + '' +  " value='" + game + "'> " + game + " : " + currentQuestion.answers[game] + " </label>"
         );
+        let submitButton = $('.submitButton').on('click', function{
+          
+
+        })
       }
 
 
